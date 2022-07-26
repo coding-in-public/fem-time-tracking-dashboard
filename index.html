@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="card card--avatar">
+      <div class="card--avatar-top card--lg">
+        <img class="avatar" src="./images/image-jeremy.png" alt="Jeremy">
+        <h1>
+          <span>Report for</span><br>
+          Jeremy Robson
+        </h1>
+      </div>
+      <div class="card--avatar-bottom card--sm">
+        <button class="btn">Daily</button>
+        <button class="btn">Weekly</button>
+        <button class="btn active">Monthly</button>
+      </div>
+    </div>
+    <div class="container--timecards">
+      <div class="card timecard timecard-work">
+        <div class="card--sm timecard--top">
+          <img class="icon" src="./images/icon-work.svg" aria-hidden="true">
+        </div>
+        <div class="timecard--bottom card--lg">
+          <div class="timecard--title">
+            <h2>
+              Work
+            </h2>
+            <button class="btn" aria-label="interactive button">
+              <svg aria-hidden="true" width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="currentColor" fill-rule="evenodd"/></svg>
+            </button>
+          </div>
+          <div class="timecard--amt">
+            <p class="current">
+              5hrs
+            </p>
+            <p class="previous">
+              Yesterday • 7hrs
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card timecard timecard-play">
+        <div class="card--sm timecard--top">
+          <img class="icon" src="./images/icon-play.svg" aria-hidden="true">
+        </div>
+        <div class="timecard--bottom card--lg">
+          <div class="timecard--title">
+            <h2>
+              Play
+            </h2>
+            <button class="btn" aria-label="interactive button">
+              <svg aria-hidden="true" width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="currentColor" fill-rule="evenodd"/></svg>
+            </button>
+          </div>
+          <div class="timecard--amt">
+            <p class="current">
+              5hrs
+            </p>
+            <p class="previous">
+              Yesterday • 7hrs
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card timecard timecard-study">
+        <div class="card--sm timecard--top">
+          <img class="icon" src="./images/icon-study.svg" aria-hidden="true">
+        </div>
+        <div class="timecard--bottom card--lg">
+          <div class="timecard--title">
+            <h2>
+              Study
+            </h2>
+            <button class="btn" aria-label="interactive button">
+              <svg aria-hidden="true" width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="currentColor" fill-rule="evenodd"/></svg>
+            </button>
+          </div>
+          <div class="timecard--amt">
+            <p class="current">
+              5hrs
+            </p>
+            <p class="previous">
+              Yesterday • 7hrs
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card timecard timecard-exercise">
+        <div class="card--sm timecard--top">
+          <img class="icon" src="./images/icon-exercise.svg" aria-hidden="true">
+        </div>
+        <div class="timecard--bottom card--lg">
+          <div class="timecard--title">
+            <h2>
+              Exercise
+            </h2>
+            <button class="btn" aria-label="interactive button">
+              <svg aria-hidden="true" width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="currentColor" fill-rule="evenodd"/></svg>
+            </button>
+          </div>
+          <div class="timecard--amt">
+            <p class="current">
+              5hrs
+            </p>
+            <p class="previous">
+              Yesterday • 7hrs
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card timecard timecard-social">
+        <div class="card--sm timecard--top">
+          <img class="icon" src="./images/icon-social.svg" aria-hidden="true">
+        </div>
+        <div class="timecard--bottom card--lg">
+          <div class="timecard--title">
+            <h2>
+              Social
+            </h2>
+            <button class="btn" aria-label="interactive button">
+              <svg aria-hidden="true" width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="currentColor" fill-rule="evenodd"/></svg>
+            </button>
+          </div>
+          <div class="timecard--amt">
+            <p class="current">
+              5hrs
+            </p>
+            <p class="previous">
+              Yesterday • 7hrs
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card timecard timecard-selfcare">
+        <div class="card--sm timecard--top">
+          <img class="icon" src="./images/icon-self-care.svg" aria-hidden="true">
+        </div>
+        <div class="timecard--bottom card--lg">
+          <div class="timecard--title">
+            <h2>
+              Self Care
+            </h2>
+            <button class="btn" aria-label="interactive button">
+              <svg aria-hidden="true" width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="currentColor" fill-rule="evenodd"/></svg>
+            </button>
+          </div>
+          <div class="timecard--amt">
+            <p class="current">
+              5hrs
+            </p>
+            <p class="previous">
+              Yesterday • 7hrs
+            </p>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  </div>
+</body>
+</html>
