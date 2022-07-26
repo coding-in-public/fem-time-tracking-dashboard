@@ -49,6 +49,12 @@ body {
   gap: clamp(1rem, 3vw, 2rem);
 }
 
+.timecard {
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  overflow: hidden;
+}
+
 .card {
   background-color: var(--bg);
   border-radius: 1rem;
@@ -129,7 +135,6 @@ h1 > span {
 
 .timecard--top {
   position: relative;
-  overflow: hidden;
 }
 
 .icon {
@@ -139,6 +144,7 @@ h1 > span {
 }
 
 .timecard--bottom {
+  align-self: end;
   position: relative;
   display: grid;
   gap: clamp(.5rem, 2vw, 2rem);
@@ -154,6 +160,7 @@ h1 > span {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2rem;
 }
 
 .current {
@@ -204,6 +211,8 @@ h2 {
   border-radius: .5rem;
   padding: .2rem .8rem;
   cursor: pointer;
+  display: grid;
+  place-items: center;
   box-shadow:
     0 0 0 -.5rem var(--bg),
     0 0 0 -.5rem var(--avatar);
@@ -222,28 +231,36 @@ h2 {
     0 0 0 .4rem var(--avatar);
 }
 
-.btn:where(.active, :hover, :focus-within) {
+.btn:where([aria-selected="true"], :hover, :focus-visible) {
   color: white;
 }
 
-@media screen and (min-width: 480px) {
+[role="tabpanel"][aria-hidden="true"] {
+  display: none;
+}
+
+@media screen and (min-width: 680px) {
   .container {
     flex-direction: row;
     flex-wrap: nowrap;
+
     width: 100%;
     max-width: 1200px;
   }
+  .panel-container {
+    flex: 1 1 80%;
+  }
 
   .container--timecards {
-    flex: 1 1 80%;
+    min-height: 100%;
     grid-template-columns: repeat(2, 1fr);
   }
 
   .card--avatar-top {
     flex-wrap: wrap;
     align-items: start;
-    align-content: start;
-    padding: 4rem 1rem;
+    align-content: center;
+    padding: 1rem;
     gap: 2rem;
   }
 
